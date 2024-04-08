@@ -1,0 +1,19 @@
+scheduling_header = "X-Schedule"
+tenant_header = "X-Tenant"
+remove_tenant_header = true
+
+campaign_header = "X-Campaign"
+remove_campaign_header = true
+
+default_tenant = "default-tenant"
+
+[tenant.'default-tenant']
+egress_pool = 'default'
+
+[tenant.'mytenant']
+egress_pool = 'pool-1'
+max_age = '10 hours'
+
+[queue.'gmail.com']
+max_age = '22 hours'
+retry_interval = '17 mins'

@@ -1,0 +1,5 @@
+["bounce.example.com"]
+# You can specify multiple options if you wish
+log_oob = true
+log_arf = true
+relay_to = true

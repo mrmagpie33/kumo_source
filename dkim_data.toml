@@ -1,0 +1,16 @@
+[base]
+# Default selector to assume if the domain/signature block
+# doesn't specify one
+selector = "dkim1024"
+
+# The default set of headers to sign if otherwise unspecified
+headers = ["From", "To", "Subject", "Date", "MIME-Version", "Content-Type", "Sender"]
+
+# Domain blocks match based on the sender domain of the incoming message
+[domain."example.com"]
+selector = 'dkim1024'
+headers = ["From", "To", "Subject", "Date", "MIME-Version", "Content-Type", "Sender"]
+algo = "sha256"
+
+# Optional override of keyfile path Default is "/opt/kumomta/etc/dkim/DOMAIN/SELECTOR.key"
+filename = "/full/path/to/key."
