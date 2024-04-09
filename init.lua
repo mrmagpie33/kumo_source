@@ -162,7 +162,6 @@ kumo.on('smtp_server_message_received', function(msg)
   -- smarthost relay - set for each new build
   msg:set_meta('routing_domain', 'ip-172-31-40-168.us-east-2.compute.internal')
   -- 
-  --
   -- set_scheduling
   msg:set_scheduling {
     dow = 'Mon',
