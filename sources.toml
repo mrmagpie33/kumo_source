@@ -1,8 +1,8 @@
 [source."ip-1"]
-source_address = "172.31.11.141"
+source_address = "172.31.41.143"
 ehlo_domain = 'mta1.examplecorp.com'
 [source."ip-2"]
-source_address = "172.31.11.141"
+source_address = "172.31.41.143"
 ehlo_domain = 'mta2.examplecorp.com'
 
 [pool."Default"]
