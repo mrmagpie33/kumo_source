@@ -81,7 +81,7 @@ consecutive_connection_failures_before_delay = 24
 ["mail.com"]
 max_deliveries_per_connection = 100
 
-["ip-172-31-21-48.us-east-2.compute.internal"]
+["ip-172-31-40-168.us-east-2.compute.internal"]
 enable_tls = "Disabled"
 
 

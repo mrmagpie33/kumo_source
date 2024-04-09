@@ -159,8 +159,16 @@ kumo.on('get_egress_path_config', shaper.get_egress_path_config)
 
 -- Processing of incoming messages via SMTP
 kumo.on('smtp_server_message_received', function(msg)
-  -- smarthost relay
-  msg:set_meta('routing_domain', 'ip-172-31-21-48.us-east-2.compute.internal')
+  -- smarthost relay - set for each new build
+  msg:set_meta('routing_domain', 'ip-172-31-40-168.us-east-2.compute.internal')
+  -- 
+  -- set_scheduling
+  msg:set_scheduling {
+    dow = 'Mon,Tue,Wed,Thu,Fri',
+    tz = 'Etc/UTC',
+    start = '17:00:00',
+    ['end'] = '19:00:00',
+  }
   -- Protect against SMTP Smuggling (https://sec-consult.com/blog/detail/smtp-smuggling-spoofing-e-mails-worldwide/)
   local failed = msg:check_fix_conformance(
     -- check for and reject messages with these issues:
