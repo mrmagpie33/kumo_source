@@ -166,8 +166,8 @@ kumo.on('smtp_server_message_received', function(msg)
   msg:set_scheduling {
     dow = 'Mon,Tue,Wed,Thu,Fri',
     tz = 'Etc/UTC',
-    start = '17:00:00',
-    ['end'] = '19:00:00',
+    start = '20:00:00',
+    ['end'] = '23:00:00',
   }
   -- Protect against SMTP Smuggling (https://sec-consult.com/blog/detail/smtp-smuggling-spoofing-e-mails-worldwide/)
   local failed = msg:check_fix_conformance(
